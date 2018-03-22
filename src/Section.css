@@ -1,0 +1,22 @@
+div {
+	background: yellow;
+}
+
+#container {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+#title {
+	flex-grow: 1
+}
+
+table{
+	flex-grow: 2
+}
+
+#button {
+/*	align-self: flex-end;*/
+	flex-grow: 1;
+}
