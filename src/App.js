@@ -9,8 +9,8 @@ class App extends Component {
     super();
     this.state = {
       people: {},
-      planet: {},
-      starship: {}
+      planets: {},
+      starships: {}
     }
     this.getData = this.getData.bind(this);
   }
@@ -21,7 +21,7 @@ class App extends Component {
     try {
       const url = await fetch(`https://swapi.co/api/${category}/${num}`)
       const data = await url.json();
-      this.setState({people: data})
+      this.setState({[category]: data})
     } catch(err) {
       console.log(err);
     }
@@ -29,21 +29,21 @@ class App extends Component {
 
   render() {
     return(
-      <div>
+      <div className='container'>
         <header>
           <img className='logo' alt='logo' src={logo} />
         </header>
-        <section>
+        <div className='content'>
           <Section category={this.state.people} categoryText='people'>
             <Button category='people' onClick={this.getData} />
           </Section>
-          <Section category={this.state.planet} categoryText='planet'>
+          <Section category={this.state.planets} categoryText='planet'>
             <Button category='planets' onClick={this.getData} />
           </Section>
-          <Section category={this.state.starship} categoryText='starship'>
+          <Section category={this.state.starships} categoryText='starship'>
             <Button category='starships' onClick={this.getData} />
           </Section>
-        </section>
+        </div>
       </div>
     );
   }

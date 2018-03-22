@@ -1,3 +1,13 @@
+.container {
+	display: flex;
+	flex-flow: column;
+	height: 100%;
+}
+
+.logo {
+	height: 130px;
+}
+
 header {
 	text-align: center;
 	background-color: black;
@@ -7,10 +17,5 @@ header {
 }
 
 section {
-	background: yellow;
-	height: 825px;
-}
-
-.logo {
-	height: 130px;
+	background-color: yellow;
 }
