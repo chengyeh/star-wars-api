@@ -6,6 +6,11 @@ header {
 	color: white;
 }
 
+section {
+	background: yellow;
+	height: 825px;
+}
+
 .logo {
 	height: 130px;
 }

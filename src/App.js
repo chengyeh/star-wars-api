@@ -33,15 +33,17 @@ class App extends Component {
         <header>
           <img className='logo' alt='logo' src={logo} />
         </header>
-        <Section category={this.state.people} categoryText='people'>
-          <Button category='people' onClick={this.getData} />
-        </Section>
-        <Section category={this.state.planet} categoryText='planet'>
-          <Button category='planets' onClick={this.getData} />
-        </Section>
-        <Section category={this.state.starship} categoryText='starship'>
-          <Button category='starships' onClick={this.getData} />
-        </Section>
+        <section>
+          <Section category={this.state.people} categoryText='people'>
+            <Button category='people' onClick={this.getData} />
+          </Section>
+          <Section category={this.state.planet} categoryText='planet'>
+            <Button category='planets' onClick={this.getData} />
+          </Section>
+          <Section category={this.state.starship} categoryText='starship'>
+            <Button category='starships' onClick={this.getData} />
+          </Section>
+        </section>
       </div>
     );
   }
